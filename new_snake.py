@@ -1,8 +1,8 @@
-import random
 from turtle import Turtle, Screen
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
 Screen().colormode(255)
+
 
 class Snake:
 
@@ -15,7 +15,6 @@ class Snake:
         for y in STARTING_POSITIONS:
             self.add_segment(y)
             self.segments[0].color('white')
-
 
     def add_segment(self, y):
         b = Turtle('square')
@@ -51,4 +50,3 @@ class Snake:
     def right(self):
         if self.head.heading() != 180:
             self.head.seth(0)
-
